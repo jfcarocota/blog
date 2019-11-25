@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/{name?}', function ($name = 'invitado') {
-    return view('home', compact('name'));
-})->name('home');
+Route::get('/{name?}', 'HomeController@index');
 
 Route::get('info', function(){
     echo "<a href='".route('contact')."'> ver contacto</a";
